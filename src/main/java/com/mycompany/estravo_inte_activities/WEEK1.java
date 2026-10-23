@@ -29,7 +29,7 @@ public class WEEK1 {
 
     /* INTERMEDIATE: Type-Safe Shopping Calculator */
     public static void intermediate() {
-        String storeName = "Sari Saro Store";
+        String storeName = "Sari Store";
         int quantity = 3;
         double unitPrice = 547.50;
 
