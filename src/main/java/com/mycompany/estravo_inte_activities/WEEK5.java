@@ -245,16 +245,16 @@ public class WEEK5 {
 
     public static void main(String[] args) {
         try (Scanner input = new Scanner(System.in)) {
-            System.out.println("===== BASIC =====");
+            System.out.println("---- BASIC ----");
             basic();
 
-            System.out.println("\n===== INTERMEDIATE =====");
+            System.out.println("\n---- INTERMEDIATE ----");
             intermediate();
 
-            System.out.println("\n===== ADVANCED =====");
+            System.out.println("\n---- ADVANCED ----");
             advanced(input);
 
-            System.out.println("\n===== EXPERT =====");
+            System.out.println("\n---- EXPERT ----");
             expert(input);
         }
     }
