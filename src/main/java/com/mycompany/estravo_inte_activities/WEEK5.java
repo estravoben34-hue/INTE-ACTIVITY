@@ -92,7 +92,7 @@ public class WEEK5 {
 
     /* ADVANCED: Search & Sort Mini-Tool */
     public static void advanced(Scanner input) {
-        int[] scores = {85, 92, 78, 65, 99, 54, 88, 73, 91, 60};
+        int[] scores = {85, 92, 78, 65, 99, 54, 88, 73, 95, 60};
 
         System.out.print("Enter a score to search for: ");
         int target = input.nextInt();
