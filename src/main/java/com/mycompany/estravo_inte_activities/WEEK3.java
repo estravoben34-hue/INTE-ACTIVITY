@@ -21,8 +21,10 @@ public class WEEK3 {
         int score = 70;
 
         if (score >= 60) {
+            System.out.println("Score: " + score);
             System.out.println("PASSED");
         } else {
+            System.out.println("Score: " + score);
             System.out.println("FAILED");
         }
     }
@@ -61,13 +63,14 @@ public class WEEK3 {
         String correctUsername = "admin";
         String correctPassword = "pass123";
         boolean accountLocked = false;
+        boolean loggedIn = false;
 
        /* How to test each result:
            Wrong username -> Incorrect username.
            Right username, wrong password -> Incorrect password.
            Right username and password, accountLocked = true -> account is locked.
            Right username and password, accountLocked = false -> Login successful. */
-
+       while (!loggedIn) {
         System.out.print("Enter username: ");
         String username = input.nextLine();
         System.out.print("Enter password: ");
@@ -79,14 +82,17 @@ public class WEEK3 {
             if (password.equals(correctPassword)) {
                 if (!accountLocked) {
                     System.out.println("Login successful. Welcome, " + username + "!");
+                    loggedIn = true;
                 } else {
                     System.out.println("Login failed: Your account is locked.");
+                    break;
                 }
             } else {
                 System.out.println("Login failed: Incorrect password.");
             }
         } else {
             System.out.println("Login failed: Incorrect username.");
+        }
         }
     }
 
@@ -96,18 +102,19 @@ public class WEEK3 {
         String correctPin = "1234";
         double balance = 12500.00;
         double withdrawnToday = 500.00;
-
-        System.out.print("Enter username: ");
-        String userName = input.nextLine();
-        System.out.print("Enter 4-digit PIN: ");
-        String pin = input.nextLine();
-
+        
         boolean authenticated = false;
         boolean approved = false;
         String denialReason = "";
 
         /*Step 1: Check the username and the 4-digit PIN.
            the code wont run unless both are correct.*/
+        while (!authenticated) {
+        System.out.print("Enter username: ");
+        String userName = input.nextLine();
+        System.out.print("Enter 4-digit PIN: ");
+        String pin = input.nextLine();
+            
         if (userName.equals(correctUsername)) {
             if (pin.length() == 4) {
                 if (pin.equals(correctPin)) {
@@ -209,6 +216,7 @@ public class WEEK3 {
             System.out.println();
             System.out.println("Status: DENIED");
             System.out.println("Reason: " + denialReason);
+        }
         }
     }
 
